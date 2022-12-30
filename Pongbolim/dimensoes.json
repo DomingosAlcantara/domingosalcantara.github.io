@@ -6,10 +6,10 @@
   
   "dimensoesDaBolinha":{
     "diametro": 13,
-    "raio": (diametro / 2),
+    "raio": 6.5,
     "posicionamento": {
-      "x": (dimensoesDoCampo.comprimento / 2),
-      "y": (dimensoesDoCampo.altura / 2)
+      "x": 400,
+      "y": 250
     },
     "velocidade": 6
   },
@@ -18,12 +18,9 @@
       "comprimento": 5,
       "altura": 110,
       "posicionamento": {
-        "x": [5, ("comprimentoArea" - 10)], //Por que um vetor?
-        "y": (("alturaArea" / 2) - ("alturaAreaDoGol" / 2)),
+        "x": [5, 790],
+        "y": 195
       }
-      // const xAreaDoGol = [5, (comprimentoArea - 10)];
-      // const yAreaDoGol = ((alturaArea / 2) - (alturaAreaDoGol / 2));
-    
     }
 }
   
