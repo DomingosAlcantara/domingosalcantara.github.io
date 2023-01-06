@@ -1,6 +1,6 @@
 const dimensoesDoCampo = {
-    altura: 500,
-    comprimento: 800
+    get altura() {500},
+    get comprimento() {800}
 },
   
 const dimensoesDaBolinha = {
@@ -17,16 +17,16 @@ const dimensoesDoGol = {
   comprimento: 5,
   altura: 110,
   posicionamento: {
-    x: [5, 790],
-    y: 195
+    get x() {[5, 790]},
+    get y() {195}
   }
 }
 
   
   //Informações do meio de campo
-  const dimensoesDoMeioDeCampo = {
-    
-  }
+const dimensoesDoMeioDeCampo = {
+  
+}
   const comprimentoMeioDeCampo = 5;
   const xMeioDoCampo = (comprimentoArea / 2);
   const yMeioDoCampo = (alturaArea / 2);
