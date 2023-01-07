@@ -1,3 +1,17 @@
+const dimensoesDaBolinha = {
+  get diametro() { 13 },
+  get raio() { (diametro / 2) },
+  posicionamento: {
+    get x() { (dimensoesDoCampo.comprimento / 2) } ,
+    get y() { (dimensoesDoCampo.altura / 2) }
+  },
+  velocidade: 6
+};
+
+const posicionamento = dimensoesDaBolinha.posicionamento;
+
+const bolinha = new Bolinha();
+
 function preload(){
   trilha = loadSound("trilha.mp3");
   raquetada = loadSound("raquetada.mp3");
@@ -26,8 +40,8 @@ function draw(){
   mostrarJogadores();
   movimentaTime1();
   movimentaTime2();
-  mostraBolinha();
-  moveBolinha();
+  mostrarBolinha(posicionamento.x, posicionamento.y, dimensoesDaBolinha.diametro);
+  moverBolinha();
   incluirPlacar();
   verificaColisaoBordas();
   vareficaColisaoRaqueteClasse(time1);
@@ -84,11 +98,9 @@ function movimentaTime2(){
   }
 }
 
-function mostraBolinha(){
-  bolinha.mostrar();
-}
+const mostrarBolinha = (x, y, diametro) => bolinha.mostrar(x, y, diametro);
 
-function moveBolinha(){
+function moverBolinha(){
   bolinha.movimentar();
 }
 
