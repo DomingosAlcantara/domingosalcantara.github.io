@@ -1,9 +1,9 @@
 const dimensoesDaBolinha = {
-  get diametro() { 13 },
-  get raio() { (diametro / 2) },
+  get diametro(d = 13) { return d; },
+  get raio(d) { return (d / 2) },
   posicionamento: {
-    get x() { (dimensoesDoCampo.comprimento / 2) } ,
-    get y() { (dimensoesDoCampo.altura / 2) }
+    get x(comprimento) { return (comprimento / 2) } ,
+    get y() { return (dimensoesDoCampo.altura / 2) }
   },
   velocidade: 6
 };

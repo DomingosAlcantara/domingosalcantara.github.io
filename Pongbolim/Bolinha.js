@@ -1,4 +1,3 @@
-//Bolinha.js
 const Bolinha = class {
   // constructor(xPosicaoInicial, yPosicaoInicial, diametro, 
   //              velocidadeEixoX, velocidadeEixoY){
@@ -9,13 +8,15 @@ const Bolinha = class {
   //   this._velocidadeEixoY = velocidadeEixoY;
   //   this._raio = (this._diametro / 2);
   // }
-  
+  definirCor(cor){
+    fill(cor);
+  }
+
   mostrar(x, y, diametro){
-    fill(255);
     circle(x, y, diametro);
   }
   
-  movimentar(){
+  movimentar(x, y, velocidade){
     this._xPosicao += this._velocidadeEixoX;
     this._yPosicao += this._velocidadeEixoY;
   }

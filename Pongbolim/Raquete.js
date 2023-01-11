@@ -31,12 +31,10 @@ const Raquete = class {
   }
   
   subir(passo = 10){
-    // this._yPosicao -= passo;
     this.setYPosicao(this.getYPosicao() - passo);
   }
   
   descer(passo = 10){
-    // this._yPosicao += 10;
     this.setYPosicao(this.getYPosicao() + passo);
   }
 }
