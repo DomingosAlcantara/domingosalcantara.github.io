@@ -9,15 +9,20 @@ const Bolinha = class {
     this._velocidadeEixoY = velocidadeEixoY;
     this._raio = (this._diametro / 2);
   }
-  
-  mostrar(){
-    fill(255);
-    circle(this._xPosicao, this._yPosicao, this._diametro);
+
+  definirCor(cor){
+    fill(cor);
+  }
+
+  mostrar(x, y, diametro){
+    circle(x, y, diametro);
   }
   
-  movimentar(){
-    this._xPosicao += this._velocidadeEixoX;
-    this._yPosicao += this._velocidadeEixoY;
+  movimentar(x, y, velocidade){
+    return [ 
+      x += velocidade,
+      y += velocidade
+    ];
   }
   
   getRaio(){
