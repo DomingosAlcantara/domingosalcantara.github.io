@@ -1,6 +1,13 @@
-html, body {
+body {
   margin: 0;
   padding: 0;
+  background-color: green;
+}
+
+.Campo {
+  width: 800px;
+  height: 500;
+  background-color: white;
 }
 canvas {
   display: block;
