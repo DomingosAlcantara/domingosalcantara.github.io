@@ -6,8 +6,8 @@ const Raquete = class {
     this._altura = altura;
   }
   
-  mostrar(){
-    rect(this._xPosicao, this._yPosicao, this._comprimento, this._altura);
+  mostrar(dimensoes){
+    rect(dimensoes.x, dimensoes.y, dimensoes.comprimento, dimensoes.altura);
   }
   
   setYPosicao(valor){
@@ -30,13 +30,11 @@ const Raquete = class {
     return this._altura;
   }
   
-  subir(){
-    this._yPosicao -= 10;
-    this.setYPosicao(this._yPosicao);
+  subir(passo = 10){
+    this.setYPosicao(this.getYPosicao() - passo);
   }
   
-  descer(){
-    this._yPosicao += 10;
-    this.setYPosicao(this._yPosicao);
+  descer(passo = 10){
+    this.setYPosicao(this.getYPosicao() + passo);
   }
 }

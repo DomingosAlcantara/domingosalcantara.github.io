@@ -1,21 +1,22 @@
-//Bolinha.js
 const Bolinha = class {
-  constructor(xPosicaoInicial, yPosicaoInicial, diametro, 
-               velocidadeEixoX, velocidadeEixoY){
-    this._diametro = diametro;
-    this._xPosicao = xPosicaoInicial;
-    this._yPosicao = yPosicaoInicial;
-    this._velocidadeEixoX = velocidadeEixoX;
-    this._velocidadeEixoY = velocidadeEixoY;
-    this._raio = (this._diametro / 2);
+  // constructor(xPosicaoInicial, yPosicaoInicial, diametro, 
+  //              velocidadeEixoX, velocidadeEixoY){
+  //   this._diametro = diametro;
+  //   this._xPosicao = xPosicaoInicial;
+  //   this._yPosicao = yPosicaoInicial;
+  //   this._velocidadeEixoX = velocidadeEixoX;
+  //   this._velocidadeEixoY = velocidadeEixoY;
+  //   this._raio = (this._diametro / 2);
+  // }
+  definirCor(cor){
+    fill(cor);
+  }
+
+  mostrar(x, y, diametro){
+    circle(x, y, diametro);
   }
   
-  mostrar(){
-    fill(255);
-    circle(this._xPosicao, this._yPosicao, this._diametro);
-  }
-  
-  movimentar(){
+  movimentar(x, y, velocidade){
     this._xPosicao += this._velocidadeEixoX;
     this._yPosicao += this._velocidadeEixoY;
   }
