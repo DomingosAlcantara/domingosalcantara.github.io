@@ -1,72 +1,84 @@
 //Bolinha.js
 const Bolinha = class {
-  constructor(xPosicaoInicial, yPosicaoInicial, diametro, 
-               velocidadeEixoX, velocidadeEixoY){
-    this._diametro = diametro;
-    this._xPosicao = xPosicaoInicial;
-    this._yPosicao = yPosicaoInicial;
-    this._velocidadeEixoX = velocidadeEixoX;
-    this._velocidadeEixoY = velocidadeEixoY;
-    this._raio = (this._diametro / 2);
+  #x = 0;
+  #y = 0;
+  #diametro = 0;
+  #raio = 0;
+  #velocidade = 0;
+
+  constructor({ x, y, diametro, velocidade }) {
+    this.diametro = diametro;
+    this.x = x;
+    this.y = y;
+    this.#velocidade = velocidade;
   }
 
-  definirCor(cor){
+  definirCor(cor) {
     fill(cor);
+    return this;
   }
 
-  mostrar(x, y, diametro){
+  mostrar(x, y, diametro) {
     circle(x, y, diametro);
   }
-  
-  movimentar(x, y, velocidade){
-    return [ 
-      x += velocidade,
-      y += velocidade
-    ];
-  }
-  
-  getRaio(){
-    return this._raio;
-  }
-  
-  inverterDirecaoEmX(){
-    this._velocidadeEixoX *= -1;
-  }
-  
-  inverterDirecaoEmY(){
-    this._velocidadeEixoY *= -1;
-  }
-  
-  faceDireita(){
-    return (this._xPosicao + this._raio);
-  }
-  
-  faceEsquerda(){
-    return (this._xPosicao - this._raio);
-  }
-  
-  faceSuperior(){
-    return (this._yPosicao - this._raio);
-  }
-  
-  faceInferior(){
-    return (this._yPosicao + this._raio);
-  }
-  
-  setXPosicao(x){
-    this._xPosicao = x;
-  }
-  
-  getXPosicao(){
-    return this._xPosicao;
-  }
-  
-  setYPosicao(y){
-    this._yPosicao = y;
-  }
-  
-  getYPosicao(){
-    return this._yPosicao;
-  }
-}
 
+  movimentar(x, y, velocidade) {
+    return [(x += velocidade), (y += velocidade)];
+  }
+
+  get raio() {
+    return this.#raio;
+  }
+
+  set raio(diametro) {
+    this.#raio = diametro / 2;
+  }
+
+  set diametro(d) {
+    this.#diametro = d;
+  }
+
+  get diametro() {
+    return this.#diametro;
+  }
+
+  inverterDirecaoEmX() {
+    this.#velocidade *= -1;
+  }
+
+  inverterDirecaoEmY() {
+    this.#velocidade *= -1;
+  }
+
+  faceDireita() {
+    return this.#x + this.raio;
+  }
+
+  faceEsquerda() {
+    return this.#x - this.raio;
+  }
+
+  faceSuperior() {
+    return this.#y - this.raio;
+  }
+
+  faceInferior() {
+    return this.#y + this.raio;
+  }
+
+  set x(x) {
+    this.#x = x;
+  }
+
+  get x() {
+    return this.#x;
+  }
+
+  set y(y) {
+    this.#y = y;
+  }
+
+  get y() {
+    return this.#y;
+  }
+};
