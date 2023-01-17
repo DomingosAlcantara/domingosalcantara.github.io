@@ -34,7 +34,7 @@ const Bolinha = class {
     this.#raio = diametro / 2;
   }
 
-  set diametro(d) {
+  set #diametro(d) {
     this.#diametro = d;
   }
 
