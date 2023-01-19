@@ -6,11 +6,11 @@ const Bolinha = class {
   #raio = 0;
   #velocidade = 0;
 
-  constructor({ x, y, diametro, velocidade }) {
-    this.diametro = diametro;
-    this.x = x;
-    this.y = y;
-    this.#velocidade = velocidade;
+  constructor( objConfig ) {
+    this.diametro = objConfig.diametro;
+    this.x = objConfig.posicinamento.x;
+    this.y = objConfig.posicinamento.y;
+    this.#velocidade = objConfig.velocidade;
   }
 
   definirCor(cor) {
