@@ -3,16 +3,23 @@ const alturaArea = 500;
 const comprimentoArea = 800;
 
 //Definindo as dimensões da bolinha
-const diametro = 13;
-const raio = (diametro / 2);
-
+// const diametro = 13;
+// const raio = (diametro / 2);
+const confBolinha = {
+  diametro: 13,
+  velocidade: 6,
+  posicionamento: {
+    x: ( comprimentoArea / 2 ),
+    y: ( alturaArea / 2 )
+  }
+}
 //Posicionamento da bolinha
-let xBolinha = (comprimentoArea / 2);
-let yBolinha = (alturaArea / 2);
+// let xBolinha = (comprimentoArea / 2);
+// let yBolinha = (alturaArea / 2);
 
-//Velocidade Inicial da bolinha
-let velocidadeXBolinha = 6;
-let velocidadeYBolinha = 6;
+// //Velocidade Inicial da bolinha
+// let velocidadeXBolinha = 6;
+// let velocidadeYBolinha = 6;
 
 //Caracteristicas da área do gol
 const comprimentoAreaDoGol = 5;
@@ -40,8 +47,7 @@ let yJogadoresTime2 = (yMeioDoCampo + (alturaDoJogador / 2));
 let pontosTime2 = 0;
 
 //Instanciando a classe Bolinha
-const bolinha = new Bolinha(xMeioDoCampo, yMeioDoCampo, 
-                            diametro, velocidadeXBolinha, velocidadeYBolinha);
+const bolinha = new Bolinha( confBolinha );
 
 let areaDoGol = [];
 
