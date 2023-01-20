@@ -1,3 +1,5 @@
+const { isNumber } = require("lodash");
+
 //Bolinha.js
 const Bolinha = class {
   #x = 0;
@@ -7,12 +9,16 @@ const Bolinha = class {
   #velocidade = 0;
 
   constructor( objConfig ) {
-    this.diametro = objConfig.diametro;
+    this.#diametro = objConfig.diametro;
     this.x = objConfig.posicinamento.x;
     this.y = objConfig.posicinamento.y;
     this.#velocidade = objConfig.velocidade;
   }
 
+  #isValid(number){
+    return (!isNumber(number) || number <= 0) ? false : true;
+  }
+  
   definirCor(cor) {
     fill(cor);
     return this;
@@ -21,9 +27,22 @@ const Bolinha = class {
   mostrar(x, y, diametro) {
     circle(x, y, diametro);
   }
-
+  
   movimentar(x, y, velocidade) {
-    return [(x += velocidade), (y += velocidade)];
+    return {
+      x: (x + velocidade),
+      y: (y + velocidade)
+    };
+  }
+
+  set #velocidade (v){
+    if(isNumber(v) && v > 0){
+      this.#velocidade = v;
+    }
+  }
+
+  get #velocidade (){
+    return this.#velocidade;
   }
 
   get raio() {
@@ -31,8 +50,9 @@ const Bolinha = class {
   }
 
   set raio(diametro) {
-    this.#raio = diametro / 2;
+    this.raio = (this.#isValid(diametro) ? (diametro / 2) : 0);
   }
+
 
   set #diametro(d) {
     this.#diametro = d;
