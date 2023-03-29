@@ -2,9 +2,6 @@
 const alturaArea = 500;
 const comprimentoArea = 800;
 
-//Definindo as dimensões da bolinha
-// const diametro = 13;
-// const raio = (diametro / 2);
 const confBolinha = {
   diametro: 13,
   velocidade: 6,
@@ -13,13 +10,6 @@ const confBolinha = {
     y: ( alturaArea / 2 )
   }
 }
-//Posicionamento da bolinha
-// let xBolinha = (comprimentoArea / 2);
-// let yBolinha = (alturaArea / 2);
-
-// //Velocidade Inicial da bolinha
-// let velocidadeXBolinha = 6;
-// let velocidadeYBolinha = 6;
 
 //Caracteristicas da área do gol
 const comprimentoAreaDoGol = 5;
