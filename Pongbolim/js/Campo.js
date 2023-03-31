@@ -1,9 +1,7 @@
 const Campo = class {
     dimensoes = {
-        afastamentoEmX = 0,
-        afastamentoEmY = 0,
-        altura = 0,
-        comprimento = 0,
+        altura: 0,
+        comprimento: 0
     }
 
     constructor(dimensoes){
@@ -15,6 +13,10 @@ const Campo = class {
     }
 
     definirAreaTotalDoCampo(dimensoes){
-        rect(dimensoes.afastamentoEmX, dimensoes.afastamentoEmY, dimensoes.comprimento, dimensoes.altura);
+        rect(dimensoes.comprimento, dimensoes.altura);
+    }
+
+    inserirLinhaDoMeioDeCampo(dimensoes){
+
     }
 }

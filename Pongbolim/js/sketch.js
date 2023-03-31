@@ -1,6 +1,7 @@
-//Definindo as dimensões da janela
-const alturaArea = 500;
-const comprimentoArea = 800;
+const areaTotalDoCampo = {
+  altura: 500,
+  comprimento: 800
+};
 
 const confBolinha = {
   diametro: 13,
@@ -57,6 +58,14 @@ let xAreaDoCampo = 10;
 let yAreaDoCampo = 30;
 let comprimentoAreaDoCampo = 780;
 let alturaAreaDoCampo = 450;
+
+const dimensoesDoCampo = {
+  afastamentoEmX = 10,
+  afastamentoEmY = 30,
+  altura = 450,
+  comprimento = 780,
+}
+
 
 let areaDoCampo = [xAreaDoCampo, yAreaDoCampo, 
                    comprimentoAreaDoCampo, 
