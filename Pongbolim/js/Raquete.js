@@ -1,5 +1,5 @@
 const Raquete = class {
-  constructor(xPosicao, yPosicao, comprimento, altura){
+  constructor({ x, y, comprimento, altura }){
     this._xPosicao = xPosicao;
     this._yPosicao = yPosicao;
     this._comprimento = comprimento;
