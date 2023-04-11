@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +9,11 @@ body {
   width: 800px;
   height: 500;
   background-color: white;
+=======
+html, body {
+  margin: 0;
+  padding: 0;
+>>>>>>> 004c613c25af4ddf4df8eba1a6dd93cafbef2ca2
 }
 canvas {
   display: block;
