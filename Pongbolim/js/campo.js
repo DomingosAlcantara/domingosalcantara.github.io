@@ -1,10 +1,7 @@
-const definirAreaTotal = (comprimento) => (altura) => {
-  return createCanvas(comprimento, altura);
-};
+const definirAreaTotal = (comprimento) => (altura) =>
+  createCanvas(comprimento, altura);
 
-const definirCor = (cor) => {
-  return fill(cor);
-};
+const definirCor = (cor) => (fn) => fn(cor);
 
 const definirMedidas = (medidaPrincipal) => (afastamento) =>
   medidaPrincipal - afastamento * 2;
@@ -19,8 +16,5 @@ const definirAreaDoCampo =
     );
   };
 
-module.exports = {
-  definirAreaDoCampo,
-  definirCor,
-  definirAreaTotal,
-};
+const definirLinhaDoMeioDeCampo =
+  (comprimentoDoCampo) => (espessuraDaLinha) => (cor) => {};

@@ -37,4 +37,4 @@ const Raquete = class {
   descer(passo = 10){
     this.setYPosicao(this.getYPosicao() + passo);
   }
-}
+};

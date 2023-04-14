@@ -64,5 +64,5 @@ const Bolinha = class {
   getYPosicao(){
     return this._yPosicao;
   }
-}
+};
 
